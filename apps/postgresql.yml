@@ -42,13 +42,14 @@
     - name: 'Setting PG Volumes'
       set_fact:
         pg_volumes:
-          - '/opt/appdata/{{pgrole}}:/var/lib/mysql'
+          - '/opt/appdata/{{pgrole}}:/var/lib/postgresql'
           - '/etc/localtime:/etc/localtime:ro'
 
     - name: 'Setting PG ENV'
       set_fact:
         pg_env:
           POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
 
     # MAIN DEPLOYMENT ##############################################################
 
