@@ -14,7 +14,7 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'postgres'
-        intport: '54320'
+        intport: '5432'
         extport: '5432'
         image: 'postgres:9.6'
 
